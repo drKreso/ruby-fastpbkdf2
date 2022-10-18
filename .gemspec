@@ -22,5 +22,5 @@ Gem::Specification.new do |s|
 	]
 
 	s.add_runtime_dependency("rake-compiler", "~> 0")
-	s.add_runtime_dependency("rake", "~> 10")
+	s.add_runtime_dependency("rake", "~> 12.2")
 end
