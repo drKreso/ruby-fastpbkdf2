@@ -19,8 +19,10 @@
 #if defined(__GNUC__)
 #if defined(__APPLE__)
 #include <machine/endian.h>
-#endif
-#if defined(__unix__)
+#else
+/* This should be working on windows as well
+and theres not much reason to check for library
+existing since it wouldn't work anyways*/
 #include <endian.h>
 #endif
 #endif
