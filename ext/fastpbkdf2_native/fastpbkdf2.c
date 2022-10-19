@@ -17,7 +17,12 @@
 #include <assert.h>
 #include <string.h>
 #if defined(__GNUC__)
+#if defined(__APPLE__)
 #include <machine/endian.h>
+#endif
+#if defined(__unix__)
+#include <endian.h>
+#endif
 #endif
 
 #include <openssl/sha.h>
@@ -399,4 +404,3 @@ void fastpbkdf2_hmac_sha512(const uint8_t *pw, size_t npw,
 {
   PBKDF2(sha512)(pw, npw, salt, nsalt, iterations, out, nout);
 }
-
