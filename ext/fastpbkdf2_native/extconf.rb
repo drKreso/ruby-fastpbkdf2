@@ -1,7 +1,7 @@
 require 'mkmf'
 
 $CFLAGS += " -Wno-deprecated-declarations -std=c99 -O3 -g -Wall -pedantic"
-$LOCAL_LIBS += " -lcrypto"
+$LOCAL_LIBS += " -libcrypto"
 
 extension_name = "fastpbkdf2_native"
 
